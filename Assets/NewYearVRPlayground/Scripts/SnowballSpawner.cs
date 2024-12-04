@@ -1,18 +1,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
-public class SnowballInteractable : XRBaseInteractable
+public class ObjectSpawner : XRBaseInteractable
 {
-    [SerializeField] private GameObject snowballPrefab; // Префаб снежка
-    [SerializeField] private Transform spawnPoint; // Точка спавна снежков
+    [SerializeField] private GameObject objectPrefab; 
+    [SerializeField] private Transform spawnPoint;
+    
+    private string _tag;
+    
+    protected override void Awake()
+    {
+        _tag = objectPrefab.tag;
+        Debug.Log(_tag);
+    }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        Debug.Log("SnowballSpawner Activated");
+        Debug.Log("Object spawner Activated");
         base.OnSelectEntered(args);
 
         // Получаем руку, которая активировала взаимодействие
@@ -20,24 +29,21 @@ public class SnowballInteractable : XRBaseInteractable
         
         if (interactor == null) return;
 
-        Debug.Log($"{interactor.hasSelection} | {CheckSelectedIsSnowball(interactor.interactablesSelected)}");
+        Debug.Log($"{interactor.hasSelection} | {CheckSelectedIsSpawnedObject(interactor.interactablesSelected)}");
         // Проверяем, занята ли рука
-        if (interactor.hasSelection && CheckSelectedIsSnowball(interactor.interactablesSelected)) return;
-        Debug.Log("Hand is dont have a Snowball");
-        // Спавним снежок
-        GameObject snowball = Instantiate(snowballPrefab, spawnPoint.position, spawnPoint.rotation);
-
-        // Захватываем снежок автоматически
-        var grabInteractable = snowball.GetComponent<XRGrabInteractable>();
+        if (interactor.hasSelection && CheckSelectedIsSpawnedObject(interactor.interactablesSelected)) return;
+        Debug.Log("Hand haven't spawned object");
+        GameObject spawnedObject = Instantiate(objectPrefab, spawnPoint.position, spawnPoint.rotation);
+        var grabInteractable = spawnedObject.GetComponent<XRGrabInteractable>();
         if (grabInteractable != null)
         {
             interactor.interactionManager.SelectEnter(args.interactorObject, grabInteractable);
-            Debug.Log("Snowball grabbed");
+            Debug.Log("Spawned object grabbed");
         }
     }
 
-    private bool CheckSelectedIsSnowball(List<IXRSelectInteractable> interactables)
+    private bool CheckSelectedIsSpawnedObject(List<IXRSelectInteractable> interactables)
     {
-        return interactables.Any(interactable => interactable.transform.CompareTag("Snowball"));
+        return interactables.Any(interactable => interactable.transform.CompareTag(_tag));
     }
 }
