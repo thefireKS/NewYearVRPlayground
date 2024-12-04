@@ -39,7 +39,7 @@ public class ScaleEffect : MonoBehaviour
             if (scaleTime > 0)
             {
                 // Плавное уменьшение масштаба до минимального
-                float scale = Mathf.Lerp(1f, minScale, 1 - (scaleTime / scaleInDuration));
+                float scale = Mathf.Lerp(originalScale.x, minScale*originalScale.x, 1 - (scaleTime / scaleInDuration));
                 transform.localScale = originalScale * scale;
                 scaleTime -= Time.deltaTime;
             }
@@ -58,7 +58,7 @@ public class ScaleEffect : MonoBehaviour
             if (scaleTime > 0)
             {
                 // Плавное увеличение масштаба до максимального
-                float scale = Mathf.Lerp(minScale, maxScale, 1 - (scaleTime / scaleOutDuration));
+                float scale = Mathf.Lerp(minScale*originalScale.x, maxScale*originalScale.x, 1 - (scaleTime / scaleOutDuration));
                 transform.localScale = originalScale * scale;
                 scaleTime -= Time.deltaTime;
             }
@@ -77,7 +77,7 @@ public class ScaleEffect : MonoBehaviour
             if (scaleTime > 0)
             {
                 // Плавное возвращение масштаба к оригинальному
-                float scale = Mathf.Lerp(maxScale, 1f, 1 - (scaleTime / returnToNormalDuration));
+                float scale = Mathf.Lerp(maxScale*originalScale.x, originalScale.x, 1 - (scaleTime / returnToNormalDuration));
                 transform.localScale = originalScale * scale;
                 scaleTime -= Time.deltaTime;
             }
