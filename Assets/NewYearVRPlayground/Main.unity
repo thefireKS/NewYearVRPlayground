@@ -682,6 +682,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireworkSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 7330961788881046279, guid: cec8c5da5256ad244af3b9b6359dcc83, type: 3}
+      propertyPath: m_Size.x
+      value: 0.28205764
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330961788881046279, guid: cec8c5da5256ad244af3b9b6359dcc83, type: 3}
+      propertyPath: m_Size.y
+      value: 0.27927732
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330961788881046279, guid: cec8c5da5256ad244af3b9b6359dcc83, type: 3}
+      propertyPath: m_Size.z
+      value: 0.18757679
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330961788881046279, guid: cec8c5da5256ad244af3b9b6359dcc83, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0037625432
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330961788881046279, guid: cec8c5da5256ad244af3b9b6359dcc83, type: 3}
+      propertyPath: m_Center.y
+      value: 0.13191912
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330961788881046279, guid: cec8c5da5256ad244af3b9b6359dcc83, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0033742413
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330961788881046279, guid: cec8c5da5256ad244af3b9b6359dcc83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1502,6 +1530,10 @@ PrefabInstance:
       propertyPath: m_EnableFarCasting
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5167925059111895691, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8877177980677234388, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_EnableFarCasting
       value: 0
@@ -1572,6 +1604,32 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
+--- !u!1 &1596006177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3320959492770896980, guid: 1558554246f5cfa4a9503e8f2d1c1b97, type: 3}
+  m_PrefabInstance: {fileID: 1011694230515415918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1596006179
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596006177}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.14
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1633844734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2262,14 +2320,30 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1189306345}
+    - target: {fileID: 3059458064058327660, guid: 1558554246f5cfa4a9503e8f2d1c1b97, type: 3}
+      propertyPath: 'm_Colliders.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1596006179}
     - target: {fileID: 3320959492770896980, guid: 1558554246f5cfa4a9503e8f2d1c1b97, type: 3}
       propertyPath: m_Name
       value: SnowballSpawner
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7330961788881046279, guid: 1558554246f5cfa4a9503e8f2d1c1b97, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330961788881046279, guid: 1558554246f5cfa4a9503e8f2d1c1b97, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7330961788881046279, guid: 1558554246f5cfa4a9503e8f2d1c1b97, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3320959492770896980, guid: 1558554246f5cfa4a9503e8f2d1c1b97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1596006179}
   m_SourcePrefab: {fileID: 100100000, guid: 1558554246f5cfa4a9503e8f2d1c1b97, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
