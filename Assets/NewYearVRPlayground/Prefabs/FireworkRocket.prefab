@@ -109,7 +109,10 @@ MonoBehaviour:
   speed: 10
   deviationAngle: 60
   lifetime: 2.585
-  explosionEffect: {fileID: 3955268006327794041, guid: 09ffe38bc7d8289408383b0e5cd00746, type: 3}
+  explosionEffect:
+  - {fileID: 3608732300981117893, guid: 40a08865e12e93d4a8954444c54c525a, type: 3}
+  - {fileID: 4656275142420581941, guid: eebd4198cae929f4883e70594350f6af, type: 3}
+  - {fileID: 7750853977139984564, guid: 6a7b26737f4a19a40b5f385c66dc96a9, type: 3}
   explosionSound: {fileID: 8300000, guid: 02171e9585c27a646abe13f31ebaa0d5, type: 3}
 --- !u!54 &-8632107368592865432
 Rigidbody:
@@ -273,6 +276,14 @@ PrefabInstance:
     - target: {fileID: 2298633324168468102, guid: ec12ee9a817cb7c40bdeb4821ea252c2, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020871224258662931, guid: ec12ee9a817cb7c40bdeb4821ea252c2, type: 3}
+      propertyPath: RotationModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020871224258662931, guid: ec12ee9a817cb7c40bdeb4821ea252c2, type: 3}
+      propertyPath: RotationModule.curve.scalar
+      value: 6.283185
       objectReference: {fileID: 0}
     - target: {fileID: 6759156149786876158, guid: ec12ee9a817cb7c40bdeb4821ea252c2, type: 3}
       propertyPath: m_LocalPosition.x

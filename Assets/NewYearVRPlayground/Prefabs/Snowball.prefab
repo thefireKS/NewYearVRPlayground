@@ -232,9 +232,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1688376190188466291}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1688376190188466291}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -330,6 +354,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf3b38ebf3c4af40b73e557306fc0db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vfxSnowballDestroy: {fileID: 3955268006327794041, guid: 9ec11b0ebcabda44f8a46017ccefbf40, type: 3}
+  sfxSnowballDestroy:
+  - {fileID: 8300000, guid: f1b8127fd65ae9841a6b6340ca12f7f6, type: 3}
+  - {fileID: 8300000, guid: 3d79099d80f66dc4198a25639226536d, type: 3}
+  - {fileID: 8300000, guid: 7febdd1a05e59f1429bda1328f1fb8c3, type: 3}
+  - {fileID: 8300000, guid: c55cedd88982c7644ba2d29453d3501d, type: 3}
   throwForce: 5
 --- !u!82 &1154035731648393449
 AudioSource:

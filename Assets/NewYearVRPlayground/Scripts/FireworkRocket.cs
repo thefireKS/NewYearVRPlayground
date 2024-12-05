@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FireworkRocket : MonoBehaviour
@@ -8,7 +9,7 @@ public class FireworkRocket : MonoBehaviour
     [SerializeField] private float lifetime = 3f; // Время жизни ракеты
 
     [Header("Взрыв")]
-    [SerializeField] private GameObject explosionEffect; // Префаб эффекта взрыва
+    [SerializeField] private List<GameObject> explosionEffect; // Префаб эффекта взрыва
     [SerializeField] private AudioClip explosionSound; // Звук взрыва
 
     private Rigidbody _rb;
@@ -41,7 +42,8 @@ public class FireworkRocket : MonoBehaviour
         // Взрыв при уничтожении
         if (explosionEffect != null)
         {
-            Instantiate(explosionEffect, transform.position, transform.rotation);
+            var explosion = explosionEffect[Random.Range(0, explosionEffect.Count)];
+            Instantiate(explosion, transform.position, transform.rotation);
         }
 
         if (explosionSound != null)

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
@@ -5,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 public class Snowball : MonoBehaviour
 {
     [SerializeField] private GameObject vfxSnowballDestroy;
+    [SerializeField] private List<AudioClip> sfxSnowballDestroy;
     
     private Rigidbody _rigidbody;
     private XRGrabInteractable _grabInteractable;
@@ -14,6 +16,8 @@ public class Snowball : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Instantiate(vfxSnowballDestroy, collision.contacts[0].point, Quaternion.identity);
+        var sound = sfxSnowballDestroy[Random.Range(0, sfxSnowballDestroy.Count)];
+        AudioSource.PlayClipAtPoint(sound, transform.position, 1f);
         Destroy(gameObject);
     }
 
