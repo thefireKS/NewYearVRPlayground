@@ -1235,11 +1235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7783e99bf5100fb4da423fff63c9a91b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minScale: 0.8
-  maxScale: 1.2
-  scaleInDuration: 0.5
-  scaleOutDuration: 0.5
-  returnToNormalDuration: 0.5
+  targetScale: {x: 0.8, y: 1.5, z: 0.8}
+  loopCount: 2
+  animationDuration: 1
 --- !u!54 &1310657322
 Rigidbody:
   m_ObjectHideFlags: 0

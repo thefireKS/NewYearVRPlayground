@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
@@ -16,7 +15,6 @@ public class ObjectSpawner : XRBaseInteractable
     protected override void Awake()
     {
         _tag = objectPrefab.tag;
-        Debug.Log(_tag);
     }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
