@@ -3,7 +3,32 @@ guid: 022330e9f84dd514e917f1a2c8a95f91
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: carrot
+    second: {fileID: 2100000, guid: 5f674ade9551892429720659c6b8ef5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ribbon
+    second: {fileID: 2100000, guid: ae28b6c6a2c03b540a5ca8717e77fa85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: snow
+    second: {fileID: 2100000, guid: 78e4bb4161730e9468785d3c6b8250ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trainGrey
+    second: {fileID: 2100000, guid: 84d409380b369a343adb7385d825b5d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood
+    second: {fileID: 2100000, guid: e4b5eac417711a643b0534fc9a6e153e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

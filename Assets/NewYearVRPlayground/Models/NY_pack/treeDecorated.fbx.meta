@@ -7,8 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: gold
+    second: {fileID: 2100000, guid: ca0aa6ebccc9e43458a2627da8483455, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: leaves
     second: {fileID: 2100000, guid: 27f01112512476042877d77a84a9738c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ribbon
+    second: {fileID: 2100000, guid: ae28b6c6a2c03b540a5ca8717e77fa85, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

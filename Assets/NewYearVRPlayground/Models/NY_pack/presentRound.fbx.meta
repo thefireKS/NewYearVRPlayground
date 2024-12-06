@@ -3,7 +3,17 @@ guid: 3770d72202ad37448b86622f7f4cf3f9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 4fd6b5171f681e34fa6d240034e3403c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ribbon
+    second: {fileID: 2100000, guid: ae28b6c6a2c03b540a5ca8717e77fa85, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

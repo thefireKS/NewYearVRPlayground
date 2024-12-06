@@ -3,7 +3,22 @@ guid: 21b9cd36ca8631e46b4949b3e0cc544b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 4fd6b5171f681e34fa6d240034e3403c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: packageWhite
+    second: {fileID: 2100000, guid: bd45b5fdd215c2a49b964088dd91035e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ribbon
+    second: {fileID: 2100000, guid: ae28b6c6a2c03b540a5ca8717e77fa85, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

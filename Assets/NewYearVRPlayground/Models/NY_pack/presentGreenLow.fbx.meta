@@ -3,7 +3,17 @@ guid: 03f199516dd86c1418232093d0036d77
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leaves
+    second: {fileID: 2100000, guid: 27f01112512476042877d77a84a9738c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ribbon
+    second: {fileID: 2100000, guid: ae28b6c6a2c03b540a5ca8717e77fa85, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
